@@ -40,6 +40,10 @@
             {{ partial "contact.html" . }}
         {{ end }}
 
+        {{ if .Site.Params.gift }}
+            {{ partial "gift.html" . }}
+        {{ end }}
+
         {{ if .Site.Data.projects }}
             {{ partial "modals.html" . }}
         {{ end }}
