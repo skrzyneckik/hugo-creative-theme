@@ -12,8 +12,8 @@
                 {{ with .Site.Params.about.description_pl }}
                     <p class="text-faded">{{ . | markdownify }}</p>
                 {{ end }}
-                {{ if and .Site.Params.about.link .Site.Params.about.buttonText_pl }}
-                    <a href="{{ .Site.Params.about.link }}" class="btn btn-default btn-xl">{{ .Site.Params.about.buttonText_pl }}</a>
+                {{ if and .Site.Params.about.link_pl .Site.Params.about.buttonText_pl }}
+                    <a href="{{ .Site.Params.about.link_pl }}" class="btn btn-default btn-xl">{{ .Site.Params.about.buttonText_pl }}</a>
                 {{ end }}
                 {{ if and .Site.Params.about.headline_pl .Site.Params.about.description_pl }}
                     <hr class="light">
