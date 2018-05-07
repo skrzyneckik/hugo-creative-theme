@@ -9,7 +9,7 @@
                 <hr>
             {{ end }}
             {{ with .Site.Params.hero.subtitle }}
-                <p>{{ . | markdownify }}</p>
+                <h3>{{ . | markdownify }}</h3>
             {{ end }}
             {{ with .Site.Params.hero.buttonText }}
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
