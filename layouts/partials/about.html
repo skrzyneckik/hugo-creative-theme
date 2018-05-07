@@ -15,7 +15,7 @@
                 {{ with .Site.Params.about.description_pl }}
                     <p class="text-faded">{{ . | markdownify }}</p>
                 {{ end }}
-                {{ if and .Site.Params.aside.button.link .Site.Params.aside.button.text }}
+                {{ if and .Site.Params.about.link .Site.Params.about.buttonText_pl }}
                     <a href="{{ .Site.Params.about.link }}" class="btn btn-default btn-xl">{{ .Site.Params.about.buttonText_pl }}</a>
                 {{ end }}
             </div>
@@ -32,7 +32,7 @@
                 {{ with .Site.Params.about.description }}
                     <p class="text-faded">{{ . | markdownify }}</p>
                 {{ end }}
-                {{ if and .Site.Params.aside.button.link .Site.Params.aside.button.text }}
+                {{ if and .Site.Params.about.link .Site.Params.about.buttonText }}
                     <a href="{{ .Site.Params.about.link }}" class="btn btn-default btn-xl">{{ .Site.Params.about.buttonText }}</a>
                 {{ end }}
             </div>
