@@ -1,32 +1,37 @@
 
-{{ if and .Site.Params.location.latitude .Site.Params.location.longitude }}
 <section id="location" class="no-padding">
+	{{ with .Site.Params.location.title }}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ . }}</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+    {{ end }}
 	<div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 {{ with .Site.Params.location.headline_pl }}
-                    <h2 class="section-heading">{{ . }}</h2>
-                {{ end }}
-                {{ if and .Site.Params.location.headline_pl .Site.Params.location.description_pl }}
-                    <hr class="light">
+                    <h3 class="section-heading">{{ . }}</h3>
                 {{ end }}
                 {{ with .Site.Params.location.description_pl }}
-                    <p class="text-faded">{{ . | markdownify }}</p>
+                    <p>{{ . | markdownify }}</p>
                 {{ end }}
+                <hr class="primary">
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 {{ with .Site.Params.location.headline }}
-                    <h2 class="section-heading">{{ . }}</h2>
-                {{ end }}
-                {{ if and .Site.Params.location.headline .Site.Params.location.description }}
-                    <hr class="light">
+                    <h3 class="section-heading">{{ . }}</h3>
                 {{ end }}
                 {{ with .Site.Params.location.description }}
-                    <p class="text-faded">{{ . | markdownify }}</p>
+                    <p>{{ . | markdownify }}</p>
                 {{ end }}
             </div>
         </div>
     </div>
+	{{ if and .Site.Params.location.latitude .Site.Params.location.longitude }}
     <div class="hidden">
         <input id="gmap-lat" value="{{ .Site.Params.location.latitude }}" />
         <input id="gmap-lng" value="{{ .Site.Params.location.longitude }}" />
@@ -36,5 +41,5 @@
             &nbsp;
         </div>
     </a>
+	{{ end }}
 </section>
-{{ end }}
