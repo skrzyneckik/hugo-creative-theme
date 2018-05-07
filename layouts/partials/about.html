@@ -4,13 +4,10 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 {{ with .Site.Params.about.headline_pl }}
-                    <h2 class="section-heading">{{ . }}</h2>
+                    <h3 class="section-heading">{{ . }}</h3>
                 {{ end }}
                 {{ with .Site.Params.about.subheadline_pl }}
-                    <h2 class="section-heading">{{ . }}</h2>
-                {{ end }}
-                {{ if and .Site.Params.about.headline_pl .Site.Params.about.description_pl }}
-                    <hr class="light">
+                    <h4 class="section-heading">{{ . }}</h4>
                 {{ end }}
                 {{ with .Site.Params.about.description_pl }}
                     <p class="text-faded">{{ . | markdownify }}</p>
@@ -18,16 +15,16 @@
                 {{ if and .Site.Params.about.link .Site.Params.about.buttonText_pl }}
                     <a href="{{ .Site.Params.about.link }}" class="btn btn-default btn-xl">{{ .Site.Params.about.buttonText_pl }}</a>
                 {{ end }}
+                {{ if and .Site.Params.about.headline_pl .Site.Params.about.description_pl }}
+                    <hr class="light">
+                {{ end }}
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 {{ with .Site.Params.about.headline }}
-                    <h2 class="section-heading">{{ . }}</h2>
+                    <h3 class="section-heading">{{ . }}</h3>
                 {{ end }}
                 {{ with .Site.Params.about.subheadline }}
-                    <h2 class="section-heading">{{ . }}</h2>
-                {{ end }}
-                {{ if and .Site.Params.about.headline .Site.Params.about.description }}
-                    <hr class="light">
+                    <h4 class="section-heading">{{ . }}</h4>
                 {{ end }}
                 {{ with .Site.Params.about.description }}
                     <p class="text-faded">{{ . | markdownify }}</p>
