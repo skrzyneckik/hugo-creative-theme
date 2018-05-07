@@ -28,6 +28,10 @@
             {{ partial "location.html" . }}
         {{ end }}
 
+        {{ if .Site.Params.accomodation }}
+            {{ partial "accomodation.html" . }}
+        {{ end }}
+
         {{ if .Site.Params.aside }}
             {{ partial "aside.html" . }}
         {{ end }}
